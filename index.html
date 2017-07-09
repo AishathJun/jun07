@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Coffee Cafe</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="library/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="library/slick/slick-theme.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/layout.css"/>
+        <style>
+            .featured{
+                width: 85%;
+                margin: auto;
+                font-family: 'Montserrat', sans-serif;
+            }
+            
+            .featured .item{
+                display: block;
+                margin: 10px 40px;
+                height: 252px;
+            }
+            
+            .featured .image{
+                height: 100%;
+                padding: 0px 0px;
+                margin: 0px auto;
+                float: left;
+                box-shadow: #0c0c0c 4px 4px 10px;
+                overflow: hidden;
+                border-radius: 7px;
+            }
+            
+            .featured .description{
+                height: 100%;
+                padding: 0px 0px;
+                margin: 0 auto;
+                overflow: hidden;
+                background: #151414;
+            }
+            
+            .featured .fcontent{
+                margin: 10px 0;
+                height: 215px;
+                background-color: #151414;
+                box-shadow: inset rgba(0, 0, 0, 0.42) 0 4px 14px 1px, inset rgba(0, 0, 0, 0.42) 0 -13px 14px 1px;
+                padding: 20px 50px 00 15px;
+                color: #bfbfbf;
+            }
+            
+            
+            .featured .left{
+                 float: right;
+            }
+            
+            .featured .featured-text{
+                font-size: 18px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                
+            </div>
+            <div class="nav">
+                <ul>
+                   <li onclick="location.href='index.html';">Home</li>
+                   <li onclick="location.href='coffee.html';">Coffee</li>
+                   <li onclick="location.href='food.html';">Food</li>
+                   <li onclick="location.href='drinks.html';">Drinks</li>
+                   <li onclick="location.href='special.html';">Special Order</li>
+                   <li onclick="location.href='contact.html';">Contact Us</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+          <div class="product-slides">
+            <img src="assets/slideshow/Image1.jpg">
+            <img src="assets/slideshow/Image2.jpg">
+            <img src="assets/slideshow/Image3.jpg">
+            <img src="assets/slideshow/Image4.jpg">
+            <img src="assets/slideshow/Image5.jpg">
+            <img src="assets/slideshow/Image6.jpg">
+            <img src="assets/slideshow/Image7.jpg">
+          </div>
+          <div class="featured">
+            <div class="item">
+                <div class="image">
+                    <img src="assets/featured/featured1.jpg" width="400">
+                </div>
+                <div class="description">
+                    <div class="fcontent">
+                        <h2 class="featured-header">STORY OF COFFEE CAFE</h2>
+                        <p class="featured-text">The coffee cafe has a history of over 50 years. It is opened by David Ng, a Latte art proffesional.
+  He began to learn it at the age of 16 years. The Coffe Coafe has been open since 1967.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image left">
+                   <img src="assets/featured/featured2.jpg" width="400">
+                </div>
+                <div class="description">
+                    <div class="fcontent">
+                        <h2 class="featured-header">THE CHARACTERISTICS OF COFFEE CAFE</h2>
+                        <p class="featured-text">  Minimal clutter give people a sense of relaxation and comfort 
+  while overhanging desk lamps creates a sense of intimacy throughout the main dining area, giving all customers a warm welcome~</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="assets/featured/featured3.jpg" width="400"> 
+                </div>
+                <div class="description">
+                    <div class="fcontent">
+                        <h2 class="featured-header">SWEET POTATO LATTE</h2>
+                        <p class="featured-text">Sweet Potato Latte is the specialilty of our shop.It is made from Italian Coffee Bean with naturally grown sweet potatoes.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"> All Rigths Reserved&copy</div>
+
+        <script type="text/javascript" src="library/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="library/slick/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $('.product-slides').slick({
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  autoplay: true,
+                  autoplaySpeed: 2000,
+                  dots: true,
+              });
+            });
+        </script>
+    </body>
+</html>

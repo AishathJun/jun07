@@ -1,0 +1,17 @@
+our drinks
+
+
+
+CHOOSE YOUR FAVORITE DRINK
+
+
+TEA
+
+-Green Tea with Lemon Iced 15$
+-Green Tea (Hot) 10$
+-Lemon Tea (Hot) 10$
+-Iced Lemon Tea  15$
+-Milk Tea (Hot) 10$
+-Pearl Milk Tea Iced 15$
+-Signature (Hot) 15$
+

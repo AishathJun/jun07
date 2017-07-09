@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Coffee Cafe</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="library/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="library/slick/slick-theme.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/layout.css"/>
+         <link rel="stylesheet" type="text/css" href="assets/product.css"/>
+
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                
+            </div>
+            <div class="nav">
+                <ul>
+                   <li onclick="location.href='index.html';">Home</li>
+                   <li onclick="location.href='coffee.html';">Coffee</li>
+                   <li onclick="location.href='food.html';">Food</li>
+                   <li onclick="location.href='drinks.html';">Drinks</li>
+                   <li onclick="location.href='special.html';">Special Order</li>
+                   <li onclick="location.href='contact.html';">Contact Us</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="product-header">CHOOSE YOUR FAVORITE DRINK</h2>
+            <div id="food-category">
+                
+            </div>
+        </div>
+        <div class="footer">Reserved</div>
+        <script type="text/javascript" src="library/jquery-3.2.1.min.js"></script>
+        <script>
+            var ProductsCategories = [{
+                    categoryName:"Coffee & Chocalate",
+                    categoryImage:"assets/products/drinks/Coffe&Chocalate/cappucino.jpg",
+                    products:[{
+                            productName:"Americano",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/Coffe&Chocalate/americano.jpg"
+                    },{
+                            productName:"Cappucino",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/Coffe&Chocalate/cappucino.jpg"
+                    },{
+                             productName:"Chocolate",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/Coffe&Chocalate/chocalate.jpg"
+                    },{
+                             productName:"Chocolate Milk Shake",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/Coffe&Chocalate/chocalatemilkshake.jpg"
+                    },{
+                             productName:"Expresso",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/Coffe&Chocalate/expresso.jpeg"
+                    },{
+                            productName:"Iced Chocolate",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/Coffe&Chocalate/Iced_Chocolate.jpg"
+                    },{
+                             productName:"Iced Coffee",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/Coffe&Chocalate/icedCoffe.jpg"
+                    },{
+                            productName:"Latte Macchaito",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/Coffe&Chocalate/latteMacchaito.jpg"
+                    }]
+            },{
+                    categoryName:"Juice",
+                    categoryImage:"assets/products/drinks/juice/title.jpg",
+                    products:[{
+                            productName:"Apple Juice",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/juice/apple-juice.jpg"
+                    },{
+                             productName:"Grapefruit Juice",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/juice/Grapefruit-Juice.jpg"
+                    },{
+                             productName:"Kiwi Juice",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/juice/kiwi.jpg"
+                    },{
+                            productName:"Lemon Juice",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/juice/lemon.jpg"
+                    },{
+                           productName:"Mango Juice",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/juice/mango.jpg"
+                    },{
+                             productName:"Orange Juice",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/juice/Orange_Juice.jpg"
+                    },{
+                            
+                            productName:"Strawberry",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/juice/Strawberry.jpg"
+					
+					        
+                    },{
+                            productName:"Watermelon",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/drinks/juice/watermelon.jpg"
+					
+                    }]
+             },{
+                    categoryName:"Tea",
+                    categoryImage:"assets/products/drinks/tea/title.jpg",
+                    products:[{
+                            productName:"Green Tea Lemon",
+                            productPrice:"RM 12",
+                            productImage:"assets/products/drinks/tea/greeanTeawithLemon.jpg"
+                    },{
+                            productName:"Green Tea",
+                            productPrice:"RM 16",
+                            productImage:"assets/products/drinks/tea/greentea.jpg"
+                    },{
+                            productName:"Hot Lemon Tea",
+                            productPrice:"RM 16",
+                            productImage:"assets/products/drinks/tea/hotlemontea.jpg"
+                    },{
+                            productName:"Iced Lemon",
+                            productPrice:"RM 15",
+                            productImage:"assets/products/drinks/tea/lemon.jpg"
+                    },{
+                            productName:"Milk Tea",
+                            productPrice:"RM 14",
+                            productImage:"assets/products/drinks/tea/milktea.jpeg"
+                    },{
+                            productName:"Pearl Milk Tea",
+                            productPrice:"RM 12",
+                            productImage:"assets/products/drinks/tea/pearlMilkTea.jpg"
+							
+					},{
+                            productName:"Signature",
+                            productPrice:"RM 12",
+                            productImage:"assets/products/drinks/tea/signature.jpg"
+                    }]
+             }];
+        
+            $(function(){
+                ProductsCategories.forEach(function(category){
+                    var fc_div =  $("#food-category");
+           
+                    var category_container = "<div class='category-container'><div class='category-container-img' style='background-image:url("+(category.categoryImage)+")'>";
+                    category_container += "</div><h3 class='category-name'>"+category.categoryName+"</h3></div>";
+                    //category_container += "</div></div>";
+                    
+                    var cc = $(category_container);
+                    fc_div.append(cc);
+                    
+                    cc.on("click",function(){
+                        fc_div.empty();
+                        category.products.forEach(function(product){
+                                    var product_container = "<div class='category-container'><div class='category-container-img' style='background-image:url("+(product.productImage)+")'>";
+                                    product_container += "</div><h3 class='category-name'>"+product.productName+"</h3></div>";
+                                    //category_container += "</div></div>";
+                                    fc_div.append(product_container);
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

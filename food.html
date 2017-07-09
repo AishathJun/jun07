@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Coffee Cafe</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="library/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="library/slick/slick-theme.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/layout.css"/>
+         <link rel="stylesheet" type="text/css" href="assets/product.css"/>
+
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                
+            </div>
+            <div class="nav">
+                <ul>
+                   <li onclick="location.href='index.html';">Home</li>
+                   <li onclick="location.href='coffee.html';">Coffee</li>
+                   <li onclick="location.href='food.html';">Food</li>
+                   <li onclick="location.href='drinks.html';">Drinks</li>
+                   <li onclick="location.href='special.html';">Special Order</li>
+                   <li onclick="location.href='contact.html';">Contact Us</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="product-header">FOOD TO MAKE YOU HAPPY</h2>
+            <div id="food-category">
+                
+            </div>
+        </div>
+        <div class="footer">Reserved</div>
+        <script type="text/javascript" src="library/jquery-3.2.1.min.js"></script>
+        <script>
+            var ProductsCategories = [{
+                    categoryName:"Cake",
+                    categoryImage:"assets/products/foods/cake/title.jpg",
+                    products:[{
+                            productName:"Chocalate Cheese Cake",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/cake/chocheese.jpg"
+                    },{
+                            productName:"Durian Cake",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/cake/durian.jpg"
+                    },{
+                            productName:"Japan Matcha Cake",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/cake/matcha.png"
+                    },{
+                            productName:"Oreo Cake",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/cake/oreocake.jpg"
+                    },{
+                            productName:"Rainbow Cake",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/cake/rainbowcake.jpg"
+                    },{
+                            productName:"Red Velvet Cake",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/cake/redvelvet.jpg"
+                    },{
+                            productName:"Strawberry Cake ",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/cake/strawberry.jpg"
+                    },{
+                            productName:"Vanila Cake",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/cake/vanila.jpg"
+                    }]
+            },{
+                    categoryName:"Doughnut",
+                    categoryImage:"assets/products/foods/Doughnut/title.jpg",
+                    products:[{
+                            productName:"Blueberry",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/Doughnut/blueberry.jpg"
+                    },{
+                            productName:"Caramel",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/Doughnut/caramel.jpeg"
+                    },{
+                            productName:"Chocalate Rainbow",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/Doughnut/Chorainbow.jpg"
+                    },{
+                            productName:"Cream Cheese",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/Doughnut/creamcheese.jpg"
+                    },{
+                            productName:"Oreo",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/Doughnut/oreodonutld-1.jpg"
+                    },{
+                            productName:"Oreo Mint",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/Doughnut/oreomint.jpg"
+                    },{
+                            productName:"Original",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/Doughnut/original.JPG"
+                    },{
+                            productName:"Strawberry",
+                            productPrice:"RM 13",
+                            productImage:"assets/products/foods/Doughnut/strawberry.jpg"
+                    }]
+             },{
+                    categoryName:"Sandwich",
+                    categoryImage:"assets/products/foods/sandwich/title.jpg",
+                    products:[{
+                            productName:"Egg Sandwich",
+                            productPrice:"RM 12",
+                            productImage:"assets/products/foods/sandwich/egg.JPG"
+                    },{
+                            productName:"Lamb Sandwich",
+                            productPrice:"RM 16",
+                            productImage:"assets/products/foods/sandwich/Lamb.JPG"
+                    },{
+                            productName:"Beef Sandwich",
+                            productPrice:"RM 16",
+                            productImage:"assets/products/foods/sandwich/Beef.JPG"
+                    },{
+                            productName:"Chicken Sandwich",
+                            productPrice:"RM 15",
+                            productImage:"assets/products/foods/sandwich/chickensandwich.jpg"
+                    },{
+                            productName:"Cheesee Sandwich",
+                            productPrice:"RM 14",
+                            productImage:"assets/products/foods/sandwich/cheesee.JPG"
+                    },{
+                            productName:"Butter+Kaya Sandwich",
+                            productPrice:"RM 12",
+                            productImage:"assets/products/foods/sandwich/butterKaya.JPG"
+                    }]
+             },{
+                    categoryName:"Spagetti",
+                    categoryImage:"assets/products/foods/spagetti/title.jpg",
+                    products:[{
+                            productName:"Carbonara",
+                            productPrice:"RM 10",
+                            productImage:"assets/products/foods/spagetti/Carbonara.jpeg"
+                    },{
+                            productName:"Alio Aglio",
+                            productPrice:"RM 10",
+                            productImage:"assets/products/foods/spagetti/alioAglio.jpg"
+                    },{
+                            productName:"Pesto",
+                            productPrice:"RM 10",
+                            productImage:"assets/products/foods/spagetti/pesto.jpg"
+                    },{
+                            productName:"Bolognese",
+                            productPrice:"RM 10",
+                            productImage:"assets/products/foods/spagetti/spaghetti-bolognese.jpg"
+                    },]
+             }];
+        
+            $(function(){
+                ProductsCategories.forEach(function(category){
+                    var fc_div =  $("#food-category");
+           
+                    var category_container = "<div class='category-container'><div class='category-container-img' style='background-image:url("+(category.categoryImage)+")'>";
+                    category_container += "</div><h3 class='category-name'>"+category.categoryName+"</h3></div>";
+                    //category_container += "</div></div>";
+                    
+                    var cc = $(category_container);
+                    fc_div.append(cc);
+                    
+                    cc.on("click",function(){
+                        fc_div.empty();
+                        category.products.forEach(function(product){
+                                    var product_container = "<div class='category-container'><div class='category-container-img' style='background-image:url("+(product.productImage)+")'>";
+                                    product_container += "</div><h3 class='category-name'>"+product.productName+"</h3></div>";
+                                    //category_container += "</div></div>";
+                                    fc_div.append(product_container);
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

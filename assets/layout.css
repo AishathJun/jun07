@@ -15,7 +15,7 @@ body{
     background-color: #212121;
     box-shadow: #696969 0 0 10px;
     display: block;
-    background-image: url(images/nav_banner.jpg);
+    background-image: url(assets/Images/nav_banner.jpg);
     background-position-x: 201px;
     background-blend-mode: hard-light;
 }
